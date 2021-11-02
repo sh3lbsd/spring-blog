@@ -6,10 +6,22 @@
 </head>
 <body>
 <h1>Welcome to the coffee page!</h1>
-<div th:if="${roast}">
-<h2>You selected <span th:text="${roast}"></span> roast!</h2>
-<p th:if="${choseDark}">You chose correctly!</p>
-<p th:if="!${choseDark}">That is incorrect!</p>
+<div th:if="${selections}">
+    <h2>You selected <span th:text="${roast}"></span> roast!</h2>
+    <p>Her are some options for you:</p>
+    <ul>
+        <li th:each="selection :${selections}">
+            <p>
+                <span th:text="${selection.brand}"></span>
+                <span th:text="${selection.origin}"></span>
+                <span th:text="${selection.roast}"></span> roast
+            </p>
+        </li>
+    </ul>
+<!--<div th:if="${roast}">-->
+<!--<h2>You selected <span th:text="${roast}"></span> roast!</h2>-->
+<!--<p th:if="${choseDark}">You chose correctly!</p>-->
+<!--<p th:if="!${choseDark}">That is incorrect!</p>-->
 </div>
 <h2>Select your favored roast:</h2>
 <ul>
