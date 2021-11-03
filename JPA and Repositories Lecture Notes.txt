@@ -1,0 +1,38 @@
+================================= JPA and REPOSITORIES
+
+-- Questions to be Answered --
+
+  How can we use Spring to interact with a data source? (a database management system)
+
+  What code / classes / abstractions will need to be created to CRUD entities (posts, users, etc.) in a Spring application?
+
+  What technologies are used to accomplish these things in Spring?
+
+-- Data Technologies --
+
+            JPA - a Java ORM specification for how to interact with persistence in an application
+
+            ORM - Object Relational Mapper: converting objects into DB table records and vice versa
+
+    Spring Data - a project of the Spring Framework concerning data management
+
+Spring Data JPA - a subproject (module) defining how JPA is integrated into the Spring framework
+
+      Hibernate - the actual implementation of JPA (the provider); supported by Spring Data JPA, among others.
+
+   Repositories - interfaces that further abstract from DAOs and contain methods to interact with data.
+
+Excellent discussion of the above... https://coderanch.com/t/685335/certification/JPA-Spring-JPA-Spring-Data
+
+
+Spring Schema Generation:
+  https://stackoverflow.com/questions/42135114/how-does-exactly-spring-jpa-hibernate-ddl-auto-property-works-in-spring/42147995
+
+JPA Resources:
+    https://www.concretepage.com/spring-boot/spring-boot-crudrepository-example
+
+Creating Seed Data:
+  https://mockaroo.com/
+
+Why to avoid @Autowired for dependency injection:
+  https://dzone.com/articles/spring-di-patterns-the-good-the-bad-and-the-ugly
