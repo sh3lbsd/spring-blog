@@ -7,7 +7,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class PostController {
+public class PostController { this.postsDao = posts }
+
+    @GetMapping("/posts")
+    @ResponseBody
+    public String index() {
+    List<Post> posts = postDao.findAll();
+    viewModel.addAttribute("posts", posts);
+    return "post/index";
+
+    }
 
     @GetMapping("/posts")
     @ResponseBody
