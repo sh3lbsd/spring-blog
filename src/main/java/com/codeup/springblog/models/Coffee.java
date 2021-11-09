@@ -1,7 +1,17 @@
 package com.codeup.springblog.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "coffees")
 public class Coffee {
+
+    @Column(nullable = false, length = 6)
     private String roast;
+
+    @Column(nullable = false, length = 50)
     private String origin;
 
     public String getBrand() {
@@ -12,6 +22,7 @@ public class Coffee {
         this.brand = brand;
     }
 
+    @Column(nullable = false, length = 50)
     private String brand;
 
     public Coffee() {
